@@ -14,3 +14,7 @@
 
 ![](/assets/import4.png)
 
+#### **3.200状态码**
+
+![](/assets/import5.png)
+
