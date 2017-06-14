@@ -30,3 +30,7 @@
 
 ![](/assets/import9.png)
 
+6.条件请求首部
+
+![](/assets/import10.png)
+
