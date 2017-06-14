@@ -1,8 +1,6 @@
 1. HTTP报文
 
-
-
-1. 2. ![](/assets/import.png)
+1. ![](/assets/import.png)
 
 
 
