@@ -24,3 +24,7 @@
 
 ![](/assets/import7.png)
 
+#### **5.500状态码**
+
+![](/assets/import8.png)
+
