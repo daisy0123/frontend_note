@@ -52,5 +52,7 @@ console.log(typeof deux); // "undefined"
 console.log(typeof trois); // "undefined"
 ```
 
+eval\(\)和Function构造函数还有一个区别，就是eval\(\)可以修改作用域链，而Function更像是一个沙箱。不管在什么地方执行Function，它只能看到全局作用域。因此它不会太严重的污染局部变量。在下面的示例代码中，eval\(\)可以访问且修改其作用域之外的变量，而Function不能（注意，使用Function和new Function是完全一样的）。
+
 
 
