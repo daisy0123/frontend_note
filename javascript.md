@@ -11,7 +11,7 @@
 
 ![](/assets/import2-1.png)
 
-```
+```js
 for (var i in man) {
     console.log(i, ":", man[i]);
 }
