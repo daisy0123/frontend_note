@@ -29,5 +29,28 @@ for (i in man) {
 
 #### **3.eval\(\)**
 
-new Function\(\)的用法和eval\(\)非常类似，应当特别注意。这种构造函数的方式很强大，但往往被误用。如果你不得不使用eval\(\)，你可以尝试用new Function\(\)来代替。这有一个潜在的好处，在new Function\(\)中运行的代码会在一个局部函数作用域内执行，因此源码中所有用var定义的变量不会自动变成全局变量。还有一种方法可以避免eval\(\)中定义的变量转换为全局变量，即是将eval\(\)包装在一个立即执行的匿名函数内（详细内容请参照第四章）
+new Function\(\)的用法和eval\(\)非常类似，应当特别注意。这种构造函数的方式很强大，但往往被误用。如果你不得不使用eval\(\)，你可以尝试用new Function\(\)来代替。这有一个潜在的好处，在new Function\(\)中运行的代码会在一个局部函数作用域内执行，因此源码中所有用var定义的变量不会自动变成全局变量。还有一种方法可以避免eval\(\)中定义的变量转换为全局变量，即是将eval\(\)包装在一个立即执行的匿名函数内。
+
+```js
+console.log(typeof un);// "undefined"
+console.log(typeof deux); // "undefined"
+console.log(typeof trois); // "undefined"
+
+var jsstring = "var un = 1; console.log(un);";
+eval(jsstring); // logs "1"
+
+jsstring = "var deux = 2; console.log(deux);";
+new Function(jsstring)(); // logs "2"
+
+jsstring = "var trois = 3; console.log(trois);";
+(function () {
+    eval(jsstring);
+}()); // logs "3"
+
+console.log(typeof un); // "number"
+console.log(typeof deux); // "undefined"
+console.log(typeof trois); // "undefined"
+```
+
+
 
