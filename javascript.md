@@ -11,6 +11,12 @@
 
 ![](/assets/import2-1.png)
 
+```
+for (var i in man) {
+    console.log(i, ":", man[i]);
+}
+```
+
 ```js
 var i,
     hasOwn = Object.prototype.hasOwnProperty;
