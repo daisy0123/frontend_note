@@ -11,3 +11,15 @@
 
 ![](/assets/import2-1.png)
 
+```js
+var i,
+    hasOwn = Object.prototype.hasOwnProperty;
+for (i in man) {
+    if (hasOwn.call(man, i)) { // filter
+        console.log(i, ":", man[i]);
+    }
+}
+```
+
+
+
